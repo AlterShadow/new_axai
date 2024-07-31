@@ -68,7 +68,6 @@ function Mine() {
           Follow simple steps to get more AxAi
         </div>
         <div className="mt-6">
-          {arr}
           <div>Free Roulette</div>
           <div className="p-3">
             <div className="bg-[#1D1D1D] rounded-md p-2">
