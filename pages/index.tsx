@@ -7,12 +7,30 @@ import { Button } from "@mui/base/Button";
 import Link from "next/link";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { setUser } from "@/redux/reducers/TaskReducer";
 function Earn() {
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const extraTasks = allTasks?.filter((x: any) => x.extra === true);
   const mainTasks = allTasks?.filter((x: any) => x.extra === false);
   const dispatch = useDispatch();
   const user = useSelector((x: any) => x.TaskReducer.user);
+  const router = useRouter();
+  const userFromQuery = router.query.user?.toString() || "";
+  useEffect(() => {
+    if (userFromQuery) {
+      const func = async () => {
+        const { data } = await axios.post(
+          "https://ttpt-app-be.onrender.com/users",
+          {
+            user: userFromQuery,
+          }
+        );
+        dispatch(setUser(data.user));
+      };
+      func();
+    }
+  }, [userFromQuery]);
   const [total, setTotal] = useState(0);
   const [mount, setMount] = useState(0);
   useEffect(() => {
@@ -23,7 +41,6 @@ function Earn() {
       if (data.length) {
         for (let i = 0; i < data.length; i++) {
           sum += data[i].mount;
-          console.log(data[i]);
           if (user === data[i].tgid) {
             setMount(data[i].mount);
           }
@@ -61,7 +78,7 @@ function Earn() {
               <div className="w-[39px] h-[39px]">
                 <img src="/imgs/avatar.png" />
               </div>
-              <div className="pl-5 text-white text-lg">@username</div>
+              <div className="pl-5 text-white text-lg">@{user}</div>
             </div>
             <div className="text-white rounded-2xl pt-1 px-3 text-xs border-2 border-blue-700">
               Verify
