@@ -56,7 +56,7 @@ function Friend() {
         </div>
         <div className="flex justify-center space-x-2 mt-8">
           <button
-            className="px-[16.5px] py-[15.5px] font-bold text-[14px] leading-[20px] bg-main text-white rounded-[12px] disabled:cursor-not-allowed"
+            className="w-full px-[16.5px] py-[15.5px] font-bold text-[14px] leading-[20px] bg-main text-white rounded-[12px] disabled:cursor-not-allowed"
             onClick={handleInviteClick}
           >
             Invite a friend
@@ -66,11 +66,15 @@ function Friend() {
           </button> */}
         </div>
         <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-[25px]">
-          <img src="/images/gift1.svg" alt="gift"></img>
+          <img
+            src="/images/telegram-1.svg"
+            className="w-12 h-12"
+            alt="gift"
+          ></img>
           <div className="text-white text-sm font-normal flex flex-col space-y-2">
-            <p className="font-semibold text-[14px] text-[#6E6E6E]">
+            <div className="w-full font-semibold text-[14px]  text-[#6E6E6E]">
               Invite a friend
-            </p>
+            </div>
             <div className="flex items-center space-x-2">
               <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
               <div className="font-extrabold text-[16px] text-main">+1,000</div>
@@ -81,7 +85,11 @@ function Friend() {
           </div>
         </div>
         <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-3">
-          <img src="/images/gift1.svg" alt="gift"></img>
+          <img
+            src="/images/telegram-BKi-aiZf.png"
+            className="w-12 h-12"
+            alt="gift"
+          ></img>
           <div className="text-white text-sm flex flex-col space-y-2">
             <p className="font-semibold text-[14px] text-[#6E6E6E]">
               Invite a friend with Telegram Premium
