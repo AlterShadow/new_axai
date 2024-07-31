@@ -3,6 +3,7 @@
 import Card from "@/app/components/common/card";
 import Link from "next/link";
 import { useSelector } from "react-redux";
+import { Button } from '@mui/base/Button';
 function Earn() {
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks)
   const extraTasks = allTasks?.filter((x: any) => x.extra === true)
@@ -23,9 +24,11 @@ function Earn() {
       </div>
       <div className="text-main text-[30px] leading-[27px] font-bold flex justify-center">1818 Axai</div>
       <div className="p-4 w-full">
-          <div className="w-full p-4 bg-main text-[17px] leading-[22px] font-bold flex justify-center items-center rounded-md text-white">
+      {/* className="w-full p-4 bg-main text-[17px] leading-[22px] font-bold flex justify-center items-center rounded-md text-white" */}
+          <Button className="w-full p-4 bg-main text-[17px] leading-[22px] font-bold flex justify-center items-center rounded-md text-white">
               Withdraw
-          </div>
+              <b>AxAi</b>
+          </Button>
       </div>
       <div className="h-[2px] w-full bg-gradient-to-r from-[#021E45] from-0% via-[#FFC700] via-50% to-[#021E45] to-100%"></div>
       <div className="p-4">

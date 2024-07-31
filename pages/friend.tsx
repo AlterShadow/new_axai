@@ -65,6 +65,38 @@ function Friend() {
             <img src="/images/copy.svg" />
           </button> */}
         </div>
+        <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-[25px]">
+          <img src="/images/gift1.svg" alt="gift"></img>
+          <div className="text-white text-sm font-normal flex flex-col space-y-2">
+            <p className="font-semibold text-[14px] text-[#6E6E6E]">
+              Invite a friend
+            </p>
+            <div className="flex items-center space-x-2">
+              <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
+              <div className="font-extrabold text-[16px] text-main">+5,000</div>
+              <div className="font-medium text-[12px] text-[#4B4B4B]">
+                for you and your friend
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-3">
+          <img src="/images/gift1.svg" alt="gift"></img>
+          <div className="text-white text-sm flex flex-col space-y-2">
+            <p className="font-semibold text-[14px] text-[#6E6E6E]">
+              Invite a friend with Telegram Premium
+            </p>
+            <div className="flex items-center space-x-2">
+              <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
+              <div className="font-extrabold text-[16px] text-main">
+                +10,000
+              </div>
+              <div className="font-medium text-[12px] text-[#4B4B4B]">
+                for you and your friend
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="font-medium text-black mt-[43px]">
           List of your friends
         </div>
@@ -73,7 +105,7 @@ function Friend() {
             <div className="font-medium text-[14px] text-[#6E6E6E] mt-3 mb-[25px]">
               You haven&apos;t invited anyone yet
             </div>
-            <img className="w-[186px] mx-auto" src="/images/crying.svg" />
+            {/* <img className="w-[186px] mx-auto" src="/images/crying.svg" /> */}
           </>
         ) : (
           <div className="mb-[150px]">

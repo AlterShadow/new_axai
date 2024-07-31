@@ -1,66 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Thin.ttf);
   font-style: normal;
   font-weight: 100;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-ExtraLight.ttf);
   font-style: normal;
   font-weight: 200;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Light.ttf);
   font-style: normal;
   font-weight: 300;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Regular.ttf);
   font-style: normal;
   font-weight: 400;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Medium.ttf);
   font-style: normal;
   font-weight: 500;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-SemiBold.ttf);
   font-style: normal;
   font-weight: 600;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Bold.ttf);
   font-style: normal;
   font-weight: 700;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-ExtraBold.ttf);
   font-style: normal;
   font-weight: 800;
-  font-display: swap
+  font-display: swap;
 }
 @font-face {
   font-family: Nohemi;
   src: url(/fonts/Nohemi-Black.ttf);
   font-style: normal;
   font-weight: 900;
-  font-display: swap
+  font-display: swap;
+}
+@font-face {
+  font-family: Karma;
+  src: url(/fonts/Karma.ttf);
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
 
 @tailwind base;
@@ -89,15 +96,17 @@ body {
   background-color: black;
 }
 
+* {
+  font-family: Karma;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-
-
-.MuiDialog-paper{
+.MuiDialog-paper {
   width: 100% !important;
   max-width: 500px !important;
   margin: 0 !important;
@@ -133,20 +142,21 @@ body {
   background: white;
 }
 
-.text-base, .text-xs {
+.text-base,
+.text-xs {
   line-height: 1.5;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 #ton-connect-button button {
-  background-color: #048DFF !important;
+  background-color: #048dff !important;
 }
 
-#ton-connect-button button *{
-  font-family: Nohemi,system-ui,sans-serif !important;
+#ton-connect-button button * {
+  font-family: Nohemi, system-ui, sans-serif !important;
 }
 
-.coingroup:active >div:first-of-type{
+.coingroup:active > div:first-of-type {
   transform: scale(1.05) rotateY(45deg) !important;
 }
 
@@ -156,17 +166,17 @@ body {
   background-clip: text;
   text-fill-color: transparent;
   background-image: linear-gradient(90deg, #0075FF, #86BEFF); */
-  color: #86BEFF;
+  color: #86beff;
 }
 
 @keyframes example1 {
   0% {
     transform: scale(1);
-    opacity:1;
+    opacity: 1;
   }
   100% {
     transform: scale(5);
-    opacity:0;
+    opacity: 0;
   }
 }
 
@@ -220,7 +230,7 @@ button {
   height: 45px;
   float: right;
   position: absolute;
-  border-radius: 30px 30px 30px 0;;
+  border-radius: 30px 30px 30px 0;
   right: 0px;
   top: 0px;
   transition: all 0.3s;
@@ -254,5 +264,5 @@ button {
   color: #fff;
 }
 .dedcription-btn:hover {
-  color: #fff!important;
+  color: #fff !important;
 }
