@@ -17,20 +17,7 @@ function Earn() {
   const user = useSelector((x: any) => x.TaskReducer.user);
   const router = useRouter();
   const userFromQuery = router.query.user?.toString() || "";
-  useEffect(() => {
-    if (userFromQuery) {
-      const func = async () => {
-        const { data } = await axios.post(
-          "https://axai-be.onrender.com/users",
-          {
-            user: userFromQuery,
-          }
-        );
-        dispatch(setUser(data.user));
-      };
-      func();
-    }
-  }, [userFromQuery]);
+
   const [total, setTotal] = useState(0);
   const [mount, setMount] = useState(0);
   useEffect(() => {

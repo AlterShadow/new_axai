@@ -5,11 +5,13 @@ import Card from "@/app/components/common/card";
 import axios from "axios";
 import React, { Ref, forwardRef, useEffect, useRef, useState } from "react";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useSnackbar } from "notistack";
+import { setDone } from "@/redux/reducers/TaskReducer";
 
 function Mine() {
   const snackbar = useSnackbar();
+  const dispatch = useDispatch();
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const mainTasks = allTasks?.filter((x: any) => x.extra === false);
   const user = useSelector((x: any) => x.TaskReducer.user);
@@ -24,9 +26,11 @@ function Mine() {
     }
     setArr(tmp);
   }, []);
+
   const handleSpin = () => {
     const tmp = Math.floor(Math.random() * 5);
     setWinPoint(tmp);
+    dispatch(setDone(1));
     setTimeout(() => {
       const title = "get lotery point";
       const price = tmp ? arr[(tmp - 3) % 5] : 0;
@@ -97,6 +101,7 @@ function Mine() {
               <button
                 className="w-full bg-main rounded-2xl p-2 text-sm text-black flex justify-center items-center"
                 onClick={handleSpin}
+                disabled={done}
               >
                 Spin
               </button>
