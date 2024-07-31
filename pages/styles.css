@@ -1,0 +1,25 @@
+.hhh {
+  --noise-size: 0.001px;
+  --tile-size: 120px;
+  background-image: repeating-radial-gradient(
+      50px at top left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at top right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom left,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    ),
+    repeating-radial-gradient(
+      50px at bottom right,
+      black var(--noise-size),
+      transparent calc(var(--noise-size) * 2)
+    );
+  background-size: var(--tile-size) var(--tile-size);
+}
