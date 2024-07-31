@@ -21,7 +21,7 @@ function Earn() {
     if (userFromQuery) {
       const func = async () => {
         const { data } = await axios.post(
-          "https://ttpt-app-be.onrender.com/users",
+          "https://axai-be.onrender.com/users",
           {
             user: userFromQuery,
           }
