@@ -33,7 +33,7 @@ function Mine() {
     dispatch(setDone(1));
     setTimeout(() => {
       const title = "get lotery point";
-      const price = tmp ? arr[(tmp - 3) % 5] : 0;
+      const price = tmp ? arr[tmp] : 0;
       const handleBonus = () => {
         axios
           .post("https://axai-be.onrender.com/bonus", {
@@ -68,6 +68,7 @@ function Mine() {
           Follow simple steps to get more AxAi
         </div>
         <div className="mt-6">
+          {arr}
           <div>Free Roulette</div>
           <div className="p-3">
             <div className="bg-[#1D1D1D] rounded-md p-2">
@@ -81,7 +82,8 @@ function Mine() {
                 <div
                   className="w-full flex flex-col absolute left-0 transition-all ease-in-out duration-[3000ms]"
                   style={{
-                    bottom: winPoint ? `${-(41 + 3) * 1.5}em` : "0",
+                    bottom:
+                      winPoint !== undefined ? `${-(37 - 4) * 1.5}em` : "0",
                   }}
                 >
                   {Array(10)
@@ -101,7 +103,6 @@ function Mine() {
               <button
                 className="w-full bg-main rounded-2xl p-2 text-sm text-black flex justify-center items-center"
                 onClick={handleSpin}
-                disabled={done}
               >
                 Spin
               </button>
