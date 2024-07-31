@@ -78,7 +78,7 @@ function Earn() {
               <div className="w-[39px] h-[39px]">
                 <img src="/imgs/avatar.png" />
               </div>
-              <div className="pl-5 text-white text-lg">@{user}</div>
+              <div className="pl-5 text-white text-lg">@{userFromQuery}</div>
             </div>
             <div className="text-white rounded-2xl pt-1 px-3 text-xs border-2 border-blue-700">
               Verify
