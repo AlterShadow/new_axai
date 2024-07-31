@@ -16,6 +16,7 @@ function Mine() {
     for (let i = 0; i < 5; i++) {
       tmp.push(Math.ceil(Math.random() * 1000) + 1);
     }
+    console.log(tmp);
     setArr(tmp);
   }, []);
   const handleSpin = () => {
@@ -27,7 +28,6 @@ function Mine() {
   };
   return (
     <div className="flex-1 h-0">
-      21012
       <div className="py-7 mb-[90px] px-5 text-white rounded-t-3xl border-t border-[#DFDCD5] bg-black h-full overflow-auto">
         <div className="flex justify-center items-center text-2xl">Earns</div>
         <div className="flex justify-center items-center text-sm font-light mt-3">
@@ -43,6 +43,7 @@ function Mine() {
                   maskImage: "linear-gradient(transparent, black, transparent)",
                 }}
               >
+                {winPoint}
                 <div className="bg-black rounded-full row-start-3" />
                 <div
                   className="w-full flex flex-col absolute left-0 transition-all ease-in-out duration-[3000ms]"
@@ -65,7 +66,7 @@ function Mine() {
                 </div>
               </div>
               <button
-                className="w-full bg-main rounded-md p-2 text-sm text-black flex justify-center items-center"
+                className="w-full bg-main rounded-2xl p-2 text-sm text-black flex justify-center items-center"
                 onClick={handleSpin}
               >
                 Spin
