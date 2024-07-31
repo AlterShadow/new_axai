@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import axios from "../app/axios";
 import { useSelector } from "react-redux";
+import "./styles.css";
 
 interface Item {
   tgid: string;
@@ -23,7 +24,7 @@ function Friend() {
   }, []);
   return (
     <>
-      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] bg-black flex-1 h-0 overflow-auto">
+      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
         <div className="font-bold text-[22px] text-main">
           {items.length} Leaders
         </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSnackbar } from "notistack";
 import axios from "../app/axios";
 import { useSelector } from "react-redux";
+import "./styles.css";
 
 interface Item {
   tgid: string;
@@ -47,11 +48,11 @@ function Friend() {
 
   return (
     <>
-      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] bg-black flex-1 h-0 overflow-auto">
+      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
         <div className="font-bold text-[42px] text-center text-main">
           Friends
         </div>
-        <div className="mt-3 font-medium text-[14px] text-center text-[#6E6E6E]">
+        <div className="mt-3 font-medium text-[14px] text-center text-white">
           You and your friend will receive bonuses
         </div>
         <div className="flex justify-center space-x-2 mt-8">
@@ -108,7 +109,7 @@ function Friend() {
         </div>
         {items.length === 0 ? (
           <>
-            <div className="font-medium text-[14px] text-[#6E6E6E] mt-3 mb-[25px]">
+            <div className="font-medium text-[14px] text-white mt-3 mb-[25px]">
               You haven&apos;t invited anyone yet
             </div>
             {/* <img className="w-[186px] mx-auto" src="/images/crying.svg" /> */}

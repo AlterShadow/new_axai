@@ -42,8 +42,8 @@ function Earn() {
   const handleImageLoad = () => {};
 
   return (
-    <div className="flex-1 h-0 hhh">
-      <div className="py-[30px] mb-[90px] px-5 rounded-t-3xl border-t border-[#DFDCD5] h-full overflow-auto">
+    <div className="flex-1 h-0">
+      <div className="py-[30px] mb-[90px] px-5 rounded-t-3xl border-t border-[#DFDCD5] h-full overflow-auto hhh">
         <div className="w-full flex justify-center items-center">
           <div className="w-[102px] h-[126px] ">
             <img src="/imgs/logo.png" className="w-[102px] h-[102px]" />
