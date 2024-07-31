@@ -33,7 +33,6 @@ const AppWrapper = ({ Component, pageProps }: any) => {
 
   return (
     <>
-      <SpaceTravelComponent />
       <Component {...pageProps} />
     </>
   );

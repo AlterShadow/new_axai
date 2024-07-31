@@ -9,9 +9,9 @@ function SpaceTravelComponent() {
 
     const context = canvas.getContext("2d");
 
-    let numStars = 3000;
+    let numStars = 1000;
     const stars = [];
-    let speed = 1;
+    let speed = 0.5;
 
     let mouseX = canvas.width / 2;
     let mouseY = canvas.height / 2;
@@ -39,24 +39,7 @@ function SpaceTravelComponent() {
       }
     }
 
-    canvas.addEventListener("mousemove", (event) => {
-      mouseX = event.clientX;
-      mouseY = event.clientY;
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.code === "ArrowUp" || event.code === "KeyW") {
-        speed += 1;
-      } else if (event.code === "ArrowDown" || event.code === "KeyS") {
-        speed = Math.max(1, speed - 1);
-      } else if (event.code === "NumpadAdd") {
-        numStars += 100;
-        populateStars();
-      } else if (event.code === "NumpadSubtract") {
-        numStars = Math.max(100, numStars - 100);
-        populateStars();
-      }
-    });
+    
 
     function updateStars() {
       context.clearRect(0, 0, canvas.width, canvas.height);
@@ -89,7 +72,6 @@ function SpaceTravelComponent() {
       <div style={{ zIndex: -1 }}>
         <canvas id="2dcanvas"></canvas>
       </div>
-      <div>dsf</div>
     </div>
   );
 }

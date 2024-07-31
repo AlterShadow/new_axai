@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { setUser } from "@/redux/reducers/TaskReducer";
 import "./styles.css";
+import SpaceTravelComponent from "./SpaceTravelComponent";
 function Earn() {
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const extraTasks = allTasks?.filter((x: any) => x.extra === true);
@@ -43,6 +44,7 @@ function Earn() {
 
   return (
     <div className="flex-1 h-0">
+      <SpaceTravelComponent />
       <div className="py-[30px] mb-[90px] px-5 rounded-t-3xl border-t border-[#DFDCD5] bg-black h-full overflow-auto">
         <div className="w-full flex justify-center items-center">
           <div className="w-[102px] h-[126px] ">
