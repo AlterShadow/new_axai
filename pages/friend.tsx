@@ -73,7 +73,7 @@ function Friend() {
             </p>
             <div className="flex items-center space-x-2">
               <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
-              <div className="font-extrabold text-[16px] text-main">+5,000</div>
+              <div className="font-extrabold text-[16px] text-main">+1,000</div>
               <div className="font-medium text-[12px] text-[#4B4B4B]">
                 for you and your friend
               </div>
@@ -88,9 +88,7 @@ function Friend() {
             </p>
             <div className="flex items-center space-x-2">
               <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
-              <div className="font-extrabold text-[16px] text-main">
-                +10,000
-              </div>
+              <div className="font-extrabold text-[16px] text-main">+2,000</div>
               <div className="font-medium text-[12px] text-[#4B4B4B]">
                 for you and your friend
               </div>

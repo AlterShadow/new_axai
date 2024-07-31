@@ -92,7 +92,7 @@ function Card({ title, description, price, link, img, onLoad }: CardProps) {
           </div>
         </div>
         <div className="ml-auto flex items-center">
-          <div className="w-[50px] bg-white rounded-2xl pt-1 px-3 text-xs text-center text-black">
+          <div className="w-[50px] border-2 border-blue-700 text-white rounded-2xl pt-1 px-3 text-xs text-center text-black">
             Go
           </div>
           {/* <img src="/images/CaretRight.svg" alt="" /> */}

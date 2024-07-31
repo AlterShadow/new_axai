@@ -2,15 +2,37 @@
 
 import Card from "@/app/components/common/card";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/base/Button";
 import Link from "next/link";
+import axios from "axios";
+import { useEffect, useState } from "react";
 function Earn() {
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const extraTasks = allTasks?.filter((x: any) => x.extra === true);
   const mainTasks = allTasks?.filter((x: any) => x.extra === false);
-
+  const dispatch = useDispatch();
   const user = useSelector((x: any) => x.TaskReducer.user);
+  const [total, setTotal] = useState(0);
+  const [mount, setMount] = useState(0);
+  useEffect(() => {
+    let id = 0;
+    const calc = async () => {
+      let sum = 0;
+      const { data } = await axios.get("https://axai-be.onrender.com/users");
+      if (data.length) {
+        for (let i = 0; i < data.length; i++) {
+          sum += data[i].mount;
+          console.log(data[i]);
+          if (user === data[i].tgid) {
+            setMount(data[i].mount);
+          }
+        }
+        setTotal(sum);
+      }
+    };
+    calc();
+  }, []);
 
   const handleImageLoad = () => {};
 
@@ -23,7 +45,7 @@ function Earn() {
           </div>
         </div>
         <div className="text-main text-[30px] leading-[27px] font-bold flex justify-center">
-          1818 Axai
+          {mount} Axai
         </div>
         <Link className="px-4" href={"/mine"}>
           <div className="px-4">
