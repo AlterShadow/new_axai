@@ -9,14 +9,8 @@ const Header = () => {
           className="w-[39px] h-[39px]"
           alt="AvatarImg"
         ></img>
-        <div className=" text-2xl font-medium flex-1 w-0 truncate">
-          <span id="spanText">A</span>
-          <span id="spanText">x</span>
-          <span id="spanText">A</span>
-          <span id="spanText">I</span>
-        </div>
-        <TonConnectButton />
       </div>
+      <TonConnectButton />
     </div>
   );
 };

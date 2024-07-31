@@ -20,7 +20,7 @@ const AppWrapper = ({ Component, pageProps }: any) => {
   const dispatch = useDispatch();
   useEffect(() => {
     const func = async () => {
-      const { data } = await axios.get("https://axai-be.onrender.com//tasks");
+      const { data } = await axios.get("https://axai-be.onrender.com/tasks");
       console.log(data);
       dispatch(setTasks(data));
     };

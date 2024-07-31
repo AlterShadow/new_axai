@@ -25,10 +25,12 @@ function Earn() {
         <div className="text-main text-[30px] leading-[27px] font-bold flex justify-center">
           1818 Axai
         </div>
-        <Link className="p-4 w-full" href={"/mine"}>
-          <Button className="w-full p-4 bg-main text-2xl leading-6 font-bold flex justify-center items-center rounded-md text-white">
-            Withdraw
-          </Button>
+        <Link className="px-4" href={"/mine"}>
+          <div className="px-4">
+            <Button className="w-full p-4 bg-main text-2xl leading-6 font-bold flex justify-center items-center rounded-md text-white">
+              Withdraw
+            </Button>
+          </div>
         </Link>
         <div className="h-[2px] w-full bg-gradient-to-r from-[#021E45] from-0% via-[#FFC700] via-50% to-[#021E45] to-100%"></div>
         <div className="p-4">

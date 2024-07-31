@@ -1,30 +1,60 @@
 "use Client";
 
 import Card from "@/app/components/common/card";
-import { useEffect, useState } from "react";
+
+import axios from "axios";
+import React, { Ref, forwardRef, useEffect, useRef, useState } from "react";
+
 import { useSelector } from "react-redux";
+import { useSnackbar } from "notistack";
 
 function Mine() {
+  const snackbar = useSnackbar();
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const mainTasks = allTasks?.filter((x: any) => x.extra === false);
   const user = useSelector((x: any) => x.TaskReducer.user);
+  const done = useSelector((x: any) => x.TaskReducer.done);
   const handleImageLoad = () => {};
   const [arr, setArr] = useState<number[]>([]);
   const [winPoint, setWinPoint] = useState<number>();
   useEffect(() => {
     let tmp: number[] = [];
     for (let i = 0; i < 5; i++) {
-      tmp.push(Math.ceil(Math.random() * 1000) + 1);
+      tmp.push(Math.ceil(Math.random() * 10) * 100);
     }
-    console.log(tmp);
     setArr(tmp);
   }, []);
   const handleSpin = () => {
-    if (winPoint !== undefined) {
-      setWinPoint(undefined);
-      return;
-    }
-    setWinPoint(Math.floor(Math.random() * 5));
+    const tmp = Math.floor(Math.random() * 5);
+    setWinPoint(tmp);
+    setTimeout(() => {
+      const title = "get lotery point";
+      const price = tmp ? arr[(tmp - 3) % 5] : 0;
+      const handleBonus = () => {
+        axios
+          .post("https://axai-be.onrender.com/bonus", {
+            user,
+            title,
+            price,
+          })
+          .then((response: any) => {
+            console.log(response.data);
+            if (response.data.stats == "success")
+              snackbar.enqueueSnackbar(
+                `You gain ${price} coins.  Your balance is ${response.data.mount}`,
+                { autoHideDuration: 1000 }
+              );
+            else
+              snackbar.enqueueSnackbar(
+                "You need to wait 24 hours for next time",
+                {
+                  autoHideDuration: 1000,
+                }
+              );
+          });
+      };
+      handleBonus();
+    }, 5000);
   };
   return (
     <div className="flex-1 h-0">
@@ -43,12 +73,11 @@ function Mine() {
                   maskImage: "linear-gradient(transparent, black, transparent)",
                 }}
               >
-                {winPoint}
                 <div className="bg-black rounded-full row-start-3" />
                 <div
                   className="w-full flex flex-col absolute left-0 transition-all ease-in-out duration-[3000ms]"
                   style={{
-                    bottom: winPoint ? `${-(41 + winPoint) * 1.5}em` : "0",
+                    bottom: winPoint ? `${-(41 + 3) * 1.5}em` : "0",
                   }}
                 >
                   {Array(10)
