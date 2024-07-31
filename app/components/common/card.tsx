@@ -11,7 +11,6 @@ import axios from "@/app/axios";
 import { useSnackbar } from "notistack";
 import { useSelector } from "react-redux";
 import "../../globals.css";
-
 interface CardProps {
   title: string;
   description?: String;
@@ -70,96 +69,98 @@ function Card({ title, description, price, link, img, onLoad }: CardProps) {
       });
   };
   return (
-    <div className="px-4 py-1">
-      <div
-        className="w-full p-3 bg-gray-700 flex justify-between items-center rounded-md"
-        onClick={handleClickOpen}
-      >
-        <img
-          src={img}
-          alt="mexc"
-          className="w-8 h-8 rounded-full"
-          onLoad={onLoad}
-        />
-        <div className="flex flex-col space-y-1 ml-3">
-          <p className="font-medium text-[14px] text-gray-200">
-            Join to our {title}
-          </p>
-          <div className="flex space-x-2 items-center">
-            <div className="font-bold text-[14px] leading-[22px] text-main">
-              +{price}
+    <div>
+      <div className="px-4 py-1">
+        <div
+          className="w-full p-3 bg-gray-700 flex justify-between items-center rounded-md"
+          onClick={handleClickOpen}
+        >
+          <img
+            src={img}
+            alt="mexc"
+            className="w-8 h-8 rounded-full"
+            onLoad={onLoad}
+          />
+          <div className="flex flex-col space-y-1 ml-3">
+            <p className="font-medium text-[14px] text-gray-200">
+              Join to our {title}
+            </p>
+            <div className="flex space-x-2 items-center">
+              <div className="font-bold text-[14px] leading-[22px] text-main">
+                +{price}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="ml-auto flex items-center">
-          <div className="w-[50px] border-2 border-blue-700 text-white rounded-2xl pt-1 px-3 text-xs text-center text-black">
-            Go
+          <div className="ml-auto flex items-center">
+            <div className="w-[50px] border-2 border-blue-700 text-white rounded-2xl pt-1 px-3 text-xs text-center text-black">
+              Go
+            </div>
+            {/* <img src="/images/CaretRight.svg" alt="" /> */}
           </div>
-          {/* <img src="/images/CaretRight.svg" alt="" /> */}
         </div>
-      </div>
-      <Dialog
-        open={open}
-        TransitionComponent={Transition}
-        keepMounted
-        onClose={handleClose}
-        aria-describedby="alert-dialog-slide-description"
-        sx={{ backdropFilter: "blur(19px)" }}
-      >
-        <DialogContent>
-          <DialogContentText
-            id="alert-dialog-slide-description"
-            sx={{ color: "white" }}
-          >
-            <img
-              className="absolute top-[21px] right-[27px] cursor-pointer"
-              onClick={handleClose}
-              src="/images/close.svg"
-            />
-            <span className="flex flex-col text-center">
+        <Dialog
+          open={open}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={handleClose}
+          aria-describedby="alert-dialog-slide-description"
+          sx={{ backdropFilter: "blur(19px)" }}
+        >
+          <DialogContent>
+            <DialogContentText
+              id="alert-dialog-slide-description"
+              sx={{ color: "white" }}
+            >
               <img
-                src={img}
-                alt="mexc"
-                className="w-[114px] h-[114px] self-center"
+                className="absolute top-[21px] right-[27px] cursor-pointer"
+                onClick={handleClose}
+                src="/images/close.svg"
               />
-              <span className="mt-[35px] font-semibold text-[32px] leading-[32px] text-main">
-                {title}
-              </span>
-              <span className="mt-[17px] font-medium text-[14px] leading-[14px] text-[#6E6E6E]">
-                {description}
-              </span>
-              <a
-                ref={forceRef}
-                className="text-black opacity-0"
-                target="_self"
-                href={link}
-              >
-                dd
-              </a>
-              <span className="mt-[61px] font-semibold text-[16px] leading-[16px] text-[#6E6E6E]">
-                Reward
-              </span>
-              <span className="flex justify-center space-x-[10.61px] items-center mt-[18.5px] font-bold text-[29px] leading-[29px] text-main">
+              <span className="flex flex-col text-center">
                 <img
-                  src="/imgs/logo.png"
-                  alt="dollar"
-                  className="w-[40px] h-[40px]"
+                  src={img}
+                  alt="mexc"
+                  className="w-[114px] h-[114px] self-center"
                 />
-                <div>+{price}</div>
-              </span>
-              <span className="flex justify-center mt-[29.08px]">
-                <button
-                  className="px-4 h-[82px] font-semibold text-[24px] bg-main text-white rounded-[16px] transition duration-300 disabled:opacity-40 disabled:cursor-not-allowed w-full"
-                  onClick={handleBonus}
-                  disabled={doing}
+                <span className="mt-[35px] font-semibold text-[32px] leading-[32px] text-main">
+                  {title}
+                </span>
+                <span className="mt-[17px] font-medium text-[14px] leading-[14px] text-[#6E6E6E]">
+                  {description}
+                </span>
+                <a
+                  ref={forceRef}
+                  className="text-black opacity-0"
+                  target="_self"
+                  href={link}
                 >
-                  Go head
-                </button>
+                  dd
+                </a>
+                <span className="mt-[61px] font-semibold text-[16px] leading-[16px] text-[#6E6E6E]">
+                  Reward
+                </span>
+                <span className="flex justify-center space-x-[10.61px] items-center mt-[18.5px] font-bold text-[29px] leading-[29px] text-main">
+                  <img
+                    src="/imgs/logo.png"
+                    alt="dollar"
+                    className="w-[40px] h-[40px]"
+                  />
+                  <div>+{price}</div>
+                </span>
+                <span className="flex justify-center mt-[29.08px]">
+                  <button
+                    className="px-4 h-[82px] font-semibold text-[24px] bg-main text-white rounded-[16px] transition duration-300 disabled:opacity-40 disabled:cursor-not-allowed w-full"
+                    onClick={handleBonus}
+                    disabled={doing}
+                  >
+                    Go head
+                  </button>
+                </span>
               </span>
-            </span>
-          </DialogContentText>
-        </DialogContent>
-      </Dialog>
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
+      </div>
     </div>
   );
 }

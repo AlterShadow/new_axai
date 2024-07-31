@@ -9,6 +9,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { setUser } from "@/redux/reducers/TaskReducer";
+import "./styles.css";
 function Earn() {
   const allTasks = useSelector((x: any) => x.TaskReducer.tasks);
   const extraTasks = allTasks?.filter((x: any) => x.extra === true);
@@ -93,9 +94,9 @@ function Earn() {
               <span>More Earnings</span>
               <div className="name-descripeion"></div>
             </div>
-            <div className="btn-icon">
-              <i className="far fa-lightbulb"></i>
-            </div>
+          </div>
+          <div className="btn-icon">
+            <i className="far fa-lightbulb"></i>
           </div>
         </Link>
       </div>
