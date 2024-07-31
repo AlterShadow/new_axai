@@ -11,7 +11,7 @@ import { forwardRef } from "react";
 import axios from "@/app/axios";
 import { removeKeyPairs, setKeyPairs } from "@/redux/reducers/TaskReducer";
 import { useState } from "react";
-import { useTonAddress } from '@tonconnect/ui-react';
+import { useTonAddress } from "@tonconnect/ui-react";
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
@@ -44,7 +44,7 @@ function Airdrop() {
     setDoing(true);
     const {
       data: { publicKey, privateKey },
-    } = await axios.post("https://ttpt-app-be.onrender.com/connect", {
+    } = await axios.post("https://axai-be.onrender.com/connect", {
       user,
     });
     dispatch(setKeyPairs({ publicKey, privateKey }));
@@ -86,10 +86,11 @@ function Airdrop() {
           Exchange
         </div>
         {userFriendlyAddress && (
-            <div>
-                <span>User-friendly address: {userFriendlyAddress}</span>
-                <span>Raw address: {rawAddress}</span>
-            </div>)}
+          <div>
+            <span>User-friendly address: {userFriendlyAddress}</span>
+            <span>Raw address: {rawAddress}</span>
+          </div>
+        )}
         {/* <div className="flex flex-col space-y-1.5 mt-5">
           <div className="flex items-center space-x-1 px-2 py-1.5 rounded-[4px] justify-center ">
             <div

@@ -16,7 +16,7 @@ function Friend() {
     const fetchData = async () => {
       if (user) {
         const response = await axios.post(
-          "https://ttpt-app-be.onrender.com/friends",
+          "https://axai-be.onrender.com/friends",
           {
             user,
           }
@@ -30,7 +30,7 @@ function Friend() {
 
   const handleInviteClick = async () => {
     // Generate the invite link
-    const inviteLink = `https://t.me/bubble_fe_bot?start=${user}\nPlay with me, become cryptoexchange CEO and get a token airdrop`;
+    const inviteLink = `https://t.me/axai_new_bot?start=${user}\nPlay with me, become cryptoexchange CEO and get a token airdrop`;
     console.log(inviteLink);
 
     // Show the invite link in a snackbar or modal
@@ -109,19 +109,23 @@ function Friend() {
           </>
         ) : (
           <div className="mb-[150px]">
-            <div className="text-white font-bold text-2xl">Friends You Invited</div>
-            {items.map((item, index) => ( 
-              
+            <div className="text-white font-bold text-2xl">
+              Friends You Invited
+            </div>
+            {items.map((item, index) => (
               <div key={index}>
                 <div className="flex justify-between items-center mt-2 border border-[#7D4DC2] p-2 px-4 mx-4 rounded-lg">
                   <div className="text-white text-lg">{index + 1}</div>
                   <div className="ml-4 text-white text-baw">{item.tgid}</div>
-                  <div className="flex items-center space-x-1"><img
-                    src="/images/dollar-icon.svg"
-                    alt="dollar"
-                    className="w-4 h-4 ml-6"
-                  ></img><span>x</span>
-                  <div className="ml-2 text-white">{item.mount}</div></div>
+                  <div className="flex items-center space-x-1">
+                    <img
+                      src="/images/dollar-icon.svg"
+                      alt="dollar"
+                      className="w-4 h-4 ml-6"
+                    ></img>
+                    <span>x</span>
+                    <div className="ml-2 text-white">{item.mount}</div>
+                  </div>
                 </div>
               </div>
             ))}
