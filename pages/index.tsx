@@ -43,7 +43,7 @@ function Earn() {
 
   return (
     <div className="flex-1 h-0">
-      <div className="py-[30px] mb-[90px] px-5 rounded-t-3xl border-t border-[#DFDCD5] h-full overflow-auto hhh">
+      <div className="py-[30px] mb-[90px] px-5 rounded-t-3xl border-t border-[#DFDCD5] h-full overflow-auto bg-black">
         <div className="w-full flex justify-center items-center">
           <div className="w-[102px] h-[126px] ">
             <img src="/imgs/logo.png" className="w-[102px] h-[102px]" />
@@ -54,7 +54,7 @@ function Earn() {
         </div>
         <Link className="px-4" href={"/mine"}>
           <div className="px-4">
-            <Button className="w-full p-4 bg-main text-2xl leading-6 font-bold flex justify-center items-center rounded-md text-white">
+            <Button className="w-full p-4 bg-[#2ff924] text-2xl leading-6 font-bold flex justify-center items-center rounded-md text-white">
               Withdraw
             </Button>
           </div>

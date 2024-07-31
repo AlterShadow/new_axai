@@ -48,7 +48,7 @@ function Friend() {
 
   return (
     <>
-      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
+      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t bg-black border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
         <div className="font-bold text-[42px] text-center text-main">
           Friends
         </div>
@@ -68,8 +68,8 @@ function Friend() {
         </div>
         <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-[25px]">
           <img
-            src="/images/telegram-1.svg"
-            className="w-12 h-12"
+            src="/imgs/logo1.png"
+            className="w-12 h-12 rounded-full"
             alt="gift"
           ></img>
           <div className="text-white text-sm font-normal flex flex-col space-y-2">
@@ -77,7 +77,11 @@ function Friend() {
               Invite a friend
             </div>
             <div className="flex items-center space-x-2">
-              <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
+              <img
+                src="/imgs/logo.png"
+                alt="dollar"
+                className="w-6 h-6 rounded-full"
+              ></img>
               <div className="font-extrabold text-[16px] text-main">+1,000</div>
               <div className="font-medium text-[12px] text-[#4B4B4B]">
                 for you and your friend
@@ -87,8 +91,8 @@ function Friend() {
         </div>
         <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-3">
           <img
-            src="/images/telegram-BKi-aiZf.png"
-            className="w-12 h-12"
+            src="/imgs/logo2.png"
+            className="w-12 h-12 rounded-full"
             alt="gift"
           ></img>
           <div className="text-white text-sm flex flex-col space-y-2">

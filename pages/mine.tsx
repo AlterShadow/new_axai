@@ -63,7 +63,7 @@ function Mine() {
   };
   return (
     <div className="flex-1 h-0">
-      <div className="hhh py-7 mb-[90px] px-5 text-white rounded-t-3xl border-t border-[#DFDCD5] h-full overflow-auto">
+      <div className="hhh py-7 mb-[90px] px-5 text-white rounded-t-3xl border-t bg-black border-[#DFDCD5] h-full overflow-auto">
         <div className="flex justify-center items-center text-2xl">Earns</div>
         <div className="flex justify-center items-center text-sm font-light mt-3">
           Follow simple steps to get more AxAi

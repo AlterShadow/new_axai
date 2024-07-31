@@ -24,7 +24,7 @@ function Friend() {
   }, []);
   return (
     <>
-      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
+      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t bg-black border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
         <div className="font-bold text-[22px] text-main">
           {items.length} Leaders
         </div>
@@ -42,7 +42,7 @@ function Friend() {
                   <div className="text-white text-lg">{index + 1}</div>
                   <div className="ml-4 text-white">{item.tgid}</div>
                   <img
-                    src="/images/dollar-icon.svg"
+                    src="/imgs/logo.png"
                     alt="dollar"
                     className="w-4 h-4 ml-6"
                   ></img>
