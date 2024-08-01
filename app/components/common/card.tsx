@@ -109,7 +109,7 @@ function Card({ title, description, price, link, img, onLoad }: CardProps) {
           <DialogContent>
             <DialogContentText
               id="alert-dialog-slide-description"
-              sx={{ color: "white" }}
+              sx={{ color: "black" }}
             >
               <img
                 className="absolute top-[21px] right-[27px] cursor-pointer"

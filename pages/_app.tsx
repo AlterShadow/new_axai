@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 import { setTasks } from "@/redux/reducers/TaskReducer";
 import { PersistGate } from "redux-persist/integration/react";
 import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
-
+import Tmp from "./tmp";
+import SpaceTravelComponent from "@/pages/SpaceTravelComponent";
 declare const window: any;
 const AppWrapper = ({ Component, pageProps }: any) => {
   const dispatch = useDispatch();
@@ -88,7 +89,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <PersistGate loading={null} persistor={persistor}>
           <SnackbarProvider>
             <Header />
-            <AppWrapper Component={Component} pageProps={pageProps} />
+            <Component {...pageProps} />
             <Footer />
           </SnackbarProvider>
         </PersistGate>

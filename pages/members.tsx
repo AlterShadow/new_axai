@@ -24,7 +24,7 @@ function Friend() {
   }, []);
   return (
     <>
-      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t bg-black border-[#DFDCD5] hhh flex-1 h-0 overflow-auto">
+      <div className="flex flex-col px-5 pt-[23px] rounded-t-3xl border-t bg-black border-[#DFDCD5] flex-1 h-0 overflow-auto">
         <div className="font-bold text-[22px] text-main">
           {items.length} Leaders
         </div>

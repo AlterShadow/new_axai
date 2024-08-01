@@ -81,8 +81,8 @@ function Airdrop() {
 
   return (
     <div className="flex-1 h-0">
-      <div className="py-[23px] px-5 text-white rounded-t-3xl border-t border-[#DFDCD5] hhh h-full overflow-auto">
-        <div className="font-bold text-[42px] text-center text-main">
+      <div className="py-[23px] px-5 text-white rounded-t-3xl border-t border-[#DFDCD5] bg-black h-full overflow-auto">
+        <div className="font-bold text-[42px] text-center text-white">
           coming soon....
         </div>
         {userFriendlyAddress && (

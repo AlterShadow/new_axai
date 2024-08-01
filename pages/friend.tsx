@@ -66,14 +66,14 @@ function Friend() {
             <img src="/images/copy.svg" />
           </button> */}
         </div>
-        <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-[25px]">
+        <div className="flex border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-[25px]">
           <img
             src="/imgs/logo1.png"
             className="w-12 h-12 rounded-full"
             alt="gift"
           ></img>
           <div className="text-white text-sm font-normal flex flex-col space-y-2">
-            <div className="w-full font-semibold text-[14px]  text-[#6E6E6E]">
+            <div className="w-full font-semibold text-base  text-WHGIITE===ACHOTE]">
               Invite a friend
             </div>
             <div className="flex items-center space-x-2">
@@ -83,26 +83,26 @@ function Friend() {
                 className="w-6 h-6 rounded-full"
               ></img>
               <div className="font-extrabold text-[16px] text-main">+1,000</div>
-              <div className="font-medium text-[12px] text-[#4B4B4B]">
+              <div className="font-medium text-base text-white">
                 for you and your friend
               </div>
             </div>
           </div>
         </div>
-        <div className="flex bg-white border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-3">
+        <div className="flex                                                                                                                                                                               border border-[#E3E3E3] rounded-[24px] p-6 space-x-5 mt-3">
           <img
             src="/imgs/logo2.png"
             className="w-12 h-12 rounded-full"
             alt="gift"
           ></img>
           <div className="text-white text-sm flex flex-col space-y-2">
-            <p className="font-semibold text-[14px] text-[#6E6E6E]">
+            <p className="font-semibold text-[14px] text-white">
               Invite a friend with Telegram Premium
             </p>
             <div className="flex items-center space-x-2">
               <img src="/imgs/logo.png" alt="dollar" className="w-6 h-6"></img>
               <div className="font-extrabold text-[16px] text-main">+2,000</div>
-              <div className="font-medium text-[12px] text-[#4B4B4B]">
+              <div className="font-medium text-base text-white">
                 for you and your friend
               </div>
             </div>
