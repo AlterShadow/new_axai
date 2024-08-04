@@ -33,6 +33,8 @@ function Mine() {
     setWinPoint(tmp);
     dispatch(setDone(1));
     setTimeout(() => {
+      alert("sending");
+      alert(arr[tmp]);
       const title = "get lotery point";
       const price = tmp ? arr[tmp] : 0;
       const handleBonus = () => {
